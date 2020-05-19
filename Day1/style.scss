@@ -1,0 +1,136 @@
+body {
+	background-color: #aabaac;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+}
+
+.container {
+	width: 80%;
+	display: flex;
+	margin: 7% auto;
+
+	.left,
+	.right {
+		background-color: crimson;
+		flex: 10%;
+	}
+
+	.left {
+		border-top-left-radius: 12px;
+		border-bottom-left-radius: 12px;
+		clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+	}
+
+	.right {
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+		clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 10% 50%);
+	}
+
+	.main {
+		background-color: #eee;
+		flex: 80%;
+		box-shadow: 15px 0 0 #eee, -10px 0 0 #eee;
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	.form {
+		width: 100%;
+
+		&__group {
+			display: flex;
+			width: 90%;
+			justify-content: center;
+			margin: 0 auto;
+			.check,
+			.userinfo,
+			.name {
+				width: 100%;
+			}
+			label {
+				display: block;
+				font-size: larger;
+				margin: 20% 0 5% 0;
+				color: crimson;
+				padding-left: 2%;
+			}
+
+			input {
+				width: 85%;
+				height: 50px;
+				border-radius: 7px;
+				border: 3px solid crimson;
+				color: crimson;
+				outline: none;
+				font-size: 25px;
+				font-family: "Trebuchet MS", "Lucida Sans Unicode",
+					"Lucida Grande", "Lucida Sans", Arial, sans-serif;
+				padding: 1% 5%;
+			}
+
+			.sex {
+				margin-top: 7%;
+				display: block;
+				label {
+					margin-top: 10%;
+				}
+				input[type="radio"] {
+					height: 30px;
+					margin-bottom: 0;
+				}
+			}
+
+			.check {
+				label {
+					margin-top: 5%;
+				}
+				input {
+					margin-bottom: 10%;
+				}
+			}
+
+			input[type="submit"] {
+				background-color: crimson;
+				margin: 5% 0;
+				width: 100%;
+				color: #eee;
+				cursor: pointer;
+
+				&:hover {
+					transform: translateY(-4%);
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 728px) {
+	.form {
+		&__group {
+			flex-direction: column;
+		}
+	}
+
+	input {
+		width: 100%;
+	}
+
+	input [type="submit"]{
+		width: 80%;
+	}
+
+	.userinfo {
+		display: block;
+	}
+}
+
+@media (max-width: 350px){
+	
+	.main{
+		border-radius: 12px;
+	}
+
+}
