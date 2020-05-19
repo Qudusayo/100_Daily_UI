@@ -2,6 +2,6 @@
 
 ______
 
-## Simple **HTML REGISTRATION** form 
+## Simple **CHECKOUT FORM** form 
 
 !["Sample Preview"](preview.png)

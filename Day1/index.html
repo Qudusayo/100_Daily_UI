@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Day1 Form Challenge</title>
+    <title>Day1 - Registration Form</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="layer left"></div>
-        <div class="layer main">
-            <form action="#" class="form" method="get">
-                <div class="form__group">
-                    <div class="name">
-                        <label for="firstname">FirstName</label>
-                        <input type="text" id="firstname">
-                    </div>
-                    <div class="name">
-                        <label for="lastname">LastName</label>
-                        <input type="text" name="" id="lastname">
-                    </div>
-                </div>
-                <div class="form__group">
-                    <div class="userinfo">
-                        <label for="username">Username</label>
-                        <input type="text" name="" id="username">
-                    </div>
-                    <div class="userinfo">
-                        <label for="email">Email</label>
-                        <input type="email" name="" id="email">
-                    </div>
-                </div>
-                <div class="form__group">
-                    <div class="sex">
-                        <label for="male">Male</label>
-                        <input type="radio" name="sex" id="male">
-                    </div>
-                    <div class="sex">
-                        <label for="female">Female</label>
-                        <input type="radio" name="sex" id="female">
-                    </div>
-                </div>
-                <div class="form__group">
-                    <div class="check">
-                        <label for="password">Password</label>
-                        <input type="password" name="" id="passord">
-                    </div>
-                    <div class="check">
-                        <label for="cpassword">Confirm Password</label>
-                        <input type="password" name="" id="cpassord">
-                    </div>
-                </div>
-                <div class="form__group">
-                    <input type="submit" value="Claim Reward">
-                </div>
-            </form>
+    <form class="form" action="GET">
+        <h2>Registration Form</h2>
+        <div class="form__row">
+            <div class="form__row__1">
+                <label for="firstName">First Name</label>
+                <input type="text"  id="firstName" />
+            </div>
+            <div class="form__row__1">
+                <label for="lastName">Last Name</label>
+                <input type="text"  id="lastName" />
+            </div>
         </div>
-        <div class="layer right"></div>
-    </div>
+        <div class="form__row">
+            <div class="form__row__1">
+                <label for="birthday">Birthday</label>
+                <input type="date" placeholder=""  id="birthday" />
+            </div>
+            <div class="form__row__1">
+                <label for="Gender">Gender</label>
+                <div class="sex">
+                    <input type="radio" name="sex" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="form__row__1">
+                <label for="email">Email</label>
+                <input type="email"  id="email" />
+            </div>
+            <div class="form__row__1">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel"  id="phoneNumber" />
+            </div>
+        </div>
+        <div class="form_row">
+            <label for="dropdown">Subject</label>
+            <select id="dropdown">
+                <option value="" hidden selected>Choose Option</option>
+                <option value="">HTML</option>
+                <option value="">CSS3</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
 </body>
+
 </html>

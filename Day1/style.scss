@@ -1,136 +1,134 @@
 body {
-	background-color: #aabaac;
-	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-		sans-serif;
+	background: linear-gradient(
+		to right,
+		rgb(245, 20, 87),
+		rgba(86, 13, 99, 0.705)
+	);
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
 }
 
-.container {
-	width: 80%;
+form {
+	width: 50%;
+	background-color: #fff;
+	padding: 5% 5%;
+	color: #333;
+	border-radius: 12px;
+	margin: 5% auto;
+	box-shadow: 2px 0 7px rgba(0, 0, 0, 0.2), -2px 0 7px rgba(0, 0, 0, 0.2),
+		0 2px 7px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.2);
+
+	h2 {
+		font-weight: 400;
+		margin-bottom: 10%;
+	}
+
+	input[type="submit"] {
+		width: 150px;
+		height: 50px;
+		outline: none;
+		border: none;
+		border-radius: 5px;
+		background-color: rgb(8, 113, 250);
+		color: #fff;
+		cursor: pointer;
+		font-size: large;
+		font-weight: 400;
+	}
+}
+
+.form__row {
 	display: flex;
-	margin: 7% auto;
+	justify-content: space-between;
 
-	.left,
-	.right {
-		background-color: crimson;
-		flex: 10%;
+	input[type="text"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="date"] {
+		display: block;
+		width: 80%;
+		height: 45px;
+		margin: 3% 0 10% 0;
+		padding: 0% 5%;
+		border: 1.3px solid #ddd;
+		font-weight: 600;
+		font-size: medium;
+		color: #555;
+		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+			"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+		background-color: lighten(#eee, 3%);
+		outline: none;
+		border-radius: 8px;
 	}
 
-	.left {
-		border-top-left-radius: 12px;
-		border-bottom-left-radius: 12px;
-		clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+	label {
+		font-weight: 500;
 	}
 
-	.right {
-		border-top-right-radius: 12px;
-		border-bottom-right-radius: 12px;
-		clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 10% 50%);
-	}
-
-	.main {
-		background-color: #eee;
-		flex: 80%;
-		box-shadow: 15px 0 0 #eee, -10px 0 0 #eee;
-
-		h2 {
-			text-align: center;
-		}
-	}
-
-	.form {
-		width: 100%;
-
-		&__group {
-			display: flex;
-			width: 90%;
-			justify-content: center;
-			margin: 0 auto;
-			.check,
-			.userinfo,
-			.name {
-				width: 100%;
-			}
-			label {
-				display: block;
-				font-size: larger;
-				margin: 20% 0 5% 0;
-				color: crimson;
-				padding-left: 2%;
-			}
-
-			input {
-				width: 85%;
-				height: 50px;
-				border-radius: 7px;
-				border: 3px solid crimson;
-				color: crimson;
-				outline: none;
-				font-size: 25px;
-				font-family: "Trebuchet MS", "Lucida Sans Unicode",
-					"Lucida Grande", "Lucida Sans", Arial, sans-serif;
-				padding: 1% 5%;
-			}
-
-			.sex {
-				margin-top: 7%;
-				display: block;
-				label {
-					margin-top: 10%;
-				}
-				input[type="radio"] {
-					height: 30px;
-					margin-bottom: 0;
-				}
-			}
-
-			.check {
-				label {
-					margin-top: 5%;
-				}
-				input {
-					margin-bottom: 10%;
-				}
-			}
-
-			input[type="submit"] {
-				background-color: crimson;
-				margin: 5% 0;
-				width: 100%;
-				color: #eee;
-				cursor: pointer;
-
-				&:hover {
-					transform: translateY(-4%);
-				}
-			}
-		}
-	}
-}
-
-@media (max-width: 728px) {
-	.form {
-		&__group {
-			flex-direction: column;
-		}
-	}
-
-	input {
-		width: 100%;
-	}
-
-	input [type="submit"]{
+	&__1 {
 		width: 80%;
 	}
 
-	.userinfo {
+	.sex {
+		margin-top: 7%;
+
+		input {
+			transform: scale(1.5);
+		}
+
+		#female {
+			margin-left: 20%;
+		}
+	}
+}
+.form_row {
+	select {
 		display: block;
+		width: 96%;
+		height: 45px;
+		border: 1.3px solid #ddd;
+		font-weight: 600;
+		font-size: medium;
+		color: #555;
+		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+			"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+		background-color: lighten(#eee, 3%);
+		outline: none;
+		border-radius: 8px;
+		padding: 0% 5%;
+		margin: 3% 0 10% 0;
 	}
 }
 
-@media (max-width: 350px){
-	
-	.main{
-		border-radius: 12px;
+input[type="date"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+@media screen and (max-width: 754px) {
+	.form__row {
+		display: block;
+
+		input[type="text"],
+		input[type="tel"],
+		input[type="email"],
+		input[type="date"] {
+			width: 100%;
+		}
 	}
 
+	.sex {
+		margin-bottom: 10%;
+	}
+
+	.form_row {
+		select {
+			width: 90%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px){
+	#female{
+		margin-left: 100%;
+	}
 }

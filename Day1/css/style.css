@@ -1,130 +1,120 @@
 body {
-  background-color: #aabaac;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to right, #f51457, rgba(86, 13, 99, 0.705));
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-.container {
-  width: 80%;
-  display: flex;
-  margin: 7% auto;
+form {
+  width: 50%;
+  background-color: #fff;
+  padding: 5% 5%;
+  color: #333;
+  border-radius: 12px;
+  margin: 5% auto;
+  box-shadow: 2px 0 7px rgba(0, 0, 0, 0.2), -2px 0 7px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.2), 0 2px 7px rgba(0, 0, 0, 0.2);
 }
 
-.container .left,
-.container .right {
-  background-color: crimson;
-  flex: 10%;
-}
-
-.container .left {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
-}
-
-.container .right {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 10% 50%);
-}
-
-.container .main {
-  background-color: #eee;
-  flex: 80%;
-  box-shadow: 15px 0 0 #eee, -10px 0 0 #eee;
-}
-
-.container .main h2 {
-  text-align: center;
-}
-
-.container .form {
-  width: 100%;
-}
-
-.container .form__group {
-  display: flex;
-  width: 90%;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.container .form__group .check,
-.container .form__group .userinfo,
-.container .form__group .name {
-  width: 100%;
-}
-
-.container .form__group label {
-  display: block;
-  font-size: larger;
-  margin: 20% 0 5% 0;
-  color: crimson;
-  padding-left: 2%;
-}
-
-.container .form__group input {
-  width: 85%;
-  height: 50px;
-  border-radius: 7px;
-  border: 3px solid crimson;
-  color: crimson;
-  outline: none;
-  font-size: 25px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  padding: 1% 5%;
-}
-
-.container .form__group .sex {
-  margin-top: 7%;
-  display: block;
-}
-
-.container .form__group .sex label {
-  margin-top: 10%;
-}
-
-.container .form__group .sex input[type="radio"] {
-  height: 30px;
-  margin-bottom: 0;
-}
-
-.container .form__group .check label {
-  margin-top: 5%;
-}
-
-.container .form__group .check input {
+form h2 {
+  font-weight: 400;
   margin-bottom: 10%;
 }
 
-.container .form__group input[type="submit"] {
-  background-color: crimson;
-  margin: 5% 0;
-  width: 100%;
-  color: #eee;
+form input[type="submit"] {
+  width: 150px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #0871fa;
+  color: #fff;
   cursor: pointer;
+  font-size: large;
+  font-weight: 400;
 }
 
-.container .form__group input[type="submit"]:hover {
-  transform: translateY(-4%);
+.form__row {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (max-width: 728px) {
-  .form__group {
-    flex-direction: column;
-  }
-  input {
-    width: 100%;
-  }
-  input [type="submit"] {
-    width: 80%;
-  }
-  .userinfo {
+.form__row input[type="text"],
+.form__row input[type="tel"],
+.form__row input[type="email"],
+.form__row input[type="date"] {
+  display: block;
+  width: 80%;
+  height: 45px;
+  margin: 3% 0 10% 0;
+  padding: 0% 5%;
+  border: 1.3px solid #ddd;
+  font-weight: 600;
+  font-size: medium;
+  color: #555;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f6f6f6;
+  outline: none;
+  border-radius: 8px;
+}
+
+.form__row label {
+  font-weight: 500;
+}
+
+.form__row__1 {
+  width: 80%;
+}
+
+.form__row .sex {
+  margin-top: 7%;
+}
+
+.form__row .sex input {
+  transform: scale(1.5);
+}
+
+.form__row .sex #female {
+  margin-left: 20%;
+}
+
+.form_row select {
+  display: block;
+  width: 96%;
+  height: 45px;
+  border: 1.3px solid #ddd;
+  font-weight: 600;
+  font-size: medium;
+  color: #555;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #f6f6f6;
+  outline: none;
+  border-radius: 8px;
+  padding: 0% 5%;
+  margin: 3% 0 10% 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+@media screen and (max-width: 754px) {
+  .form__row {
     display: block;
   }
+  .form__row input[type="text"],
+  .form__row input[type="tel"],
+  .form__row input[type="email"],
+  .form__row input[type="date"] {
+    width: 100%;
+  }
+  .sex {
+    margin-bottom: 10%;
+  }
+  .form_row select {
+    width: 90%;
+  }
 }
 
-@media (max-width: 350px) {
-  .main {
-    border-radius: 12px;
+@media screen and (max-width: 450px) {
+  #female {
+    margin-left: 100%;
   }
 }
