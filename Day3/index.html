@@ -1,11 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day3 - Upcoming</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Day3 - Landing Page</title>
 </head>
+
 <body>
-    
+    <main>
+        <header>
+            <h2>Maild.js</h2>
+            <button class="btn">
+                Download
+            </button>
+        </header>
+
+        <div class="content">
+            <h1>
+                Syntax Highlighter for Every Javascript Devs
+            </h1>
+            <p>
+                Maild is a lightweight, extensible javascript, built with nodemailer standards in mind. It’s used in thousands of websites, including some of those you visit daily.
+            </p>
+
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github mr-2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                Contribute
+            </button>
+        </div>
+
+        <div class="codebox">
+            <div class="dots">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+
+            <pre>
+                <code class="">
+<span class="span">import</span> {DomSanitizer} from '@angular/platform-browser';
+<span class="span">import</span> {Pipe, PipeTransform} from '@angular/core';
+                    
+import { icons } from 'feather-icons'; // v4+
+                    
+@Pipe({ name: 'feather' })
+export  class  FeatherIconsPipe   implements   PipeTransform {
+                    
+    constructor(private sanitizer: DomSanitizer) {}
+                    
+transform(icon: string,   size:   number = 24,  color:   string =  'inherit') {
+    return this.sanitizer.bypassSecurityTrustHtml(icons[icon].toSvg({
+        width: size,
+        height: size,
+        color: color
+        }));
+    }
+}
+                </code>
+            </pre>
+        </div>
+    </main>
+    <div class="reason">
+        <h2>Reason Why People Love <span class="lang">Maild.js</span> </h2>
+
+        <div class="medias">
+            <div class="media">
+                <div class="medium">
+                    <svg class='green' xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    Dead Simple
+
+                </div>
+                <div class="medium m1">
+                    <svg class='green' xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-command"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+                    Highly Intuitive
+                </div>
+            </div>
+            <div class="media">
+                <div class="medium">
+                    <svg class='green' xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17" y1="15" x2="9" y2="15"></line></svg>
+                    Light as a Feather
+                </div>
+                <div class="medium m1">
+                    <svg class='green' xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    Blazing Fast
+                </div>
+            </div>
+            <div class="media">
+                <div class="medium">
+                    <svg class='green' xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-pull-request"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7"></path><line x1="6" y1="9" x2="6" y2="21"></line></svg>
+                    Extensible
+                </div>
+                <div class="medium m1">
+                    <svg class='green' xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-droplet"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                    Easy Using
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="testimonial">
+        <h2>
+            Used by Thousands of Developers
+        </h2>
+        <p>Mild.js is used on several websites, small and large under development and testing</p>
+    </div>
+
+    <footer>
+        <p>
+            <a href="#">Test Drive</a>
+            <a href="#">API Docs</a>
+            <a href="#">Fork Maild.js on GitHub</a>
+        </p>
+        <p>© 2020 Maild - All Rights Reserved</p>
+    </footer>
 </body>
+
 </html>
