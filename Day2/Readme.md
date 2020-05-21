@@ -2,6 +2,6 @@
 
 ______
 
-## Simple **CHECKOUT FORM** form 
+## Simple **CHECKOUT FORM** form
 
 !["Sample Preview"](preview.png)
