@@ -1,0 +1,94 @@
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-color: orangered;
+    overflow-x: hidden;
+}
+
+.calc{
+    width: 50%;
+    min-width: 325px;
+    background-color: rgb(6, 14, 10);
+    height: 100vh;
+    margin: 0 auto;
+
+    .screen{
+        width: 100%;
+        height: 40%;
+    }
+
+    color: #ffffff;
+
+    .pflex{
+        display: flex;
+    }
+
+    .flex0{
+        flex: 3;
+
+        .flex__keys{
+            display: flex;
+
+            &__key{
+                cursor: pointer;
+                width: 33.5%;
+                height: 30px;
+                font-size: 2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-align: center;
+                padding: 22.3px 0;
+            }
+        }
+    }
+
+    .flex1{
+        flex: 1;
+
+        background-color:  lighten(rgb(6, 14, 10), 2%);
+        height: 100%;
+
+        .flex__symbol{
+            height: 20px;
+            padding: 19.7px 30px;
+            font-size: 1.3em;
+            text-align: left;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: orangered;
+        }
+    }
+}
+
+.sci{
+    position: absolute;
+    width: 403px;
+    height: 296px;
+    background-color: orangered;
+    color: orangered;
+    top: 40%;
+    left: 35%;
+    transition: transform .3s linear;
+    transform: translateX(90%);
+    user-select: none;
+
+    &__keys{
+        display: flex;
+        cursor: pointer;
+
+        &__key{
+            width: 40%;
+            background-color: orangered;
+            text-align: center;
+            padding: 18px 0;
+            font-size: 1.2em;
+            font-weight: 200;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    }
+
+    &:hover{
+        transform: translateX(0);
+        color: #dddddd;
+    }
+
+}

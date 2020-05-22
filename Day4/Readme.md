@@ -4,4 +4,4 @@ ______
 
 ## **CALCULATOR**
 
-!["Sample Preview"](preview.png)
+!["Sample Preview"](preview.gif)

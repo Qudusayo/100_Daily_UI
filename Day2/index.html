@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Day2 - Checkout Form</title>
 </head>
+
 <body>
     <div class="checkout">
         <h1>Checkout</h1>
@@ -25,7 +27,7 @@
             <div class="flex">
                 <div class="number num1">
                     <label for="ccnumber">Credit Card Number</label>
-                    <input required type="text" id="ccnumber">
+                    <input oninput="four()" required type="text" id="ccnumber">
                     <span class="logo">
                         <i class="fa fa-cc-visa"></i>
                     </span>
@@ -59,7 +61,33 @@
             </div>
         </form>
     </div>
+
+    <script>
+        function four() {
+            let value = document.querySelector('#ccnumber').value
+            
+            let store = []
+            let fourGap = ''
+
+            for (i in value) {
+                fourGap += value[i]
+                
+                if (fourGap.length == 4) {
+                    store.push(fourGap)
+                    fourGap = ''
+                    document.querySelector('#ccnumber').value = store.join('    ') 
+                }
+                else{
+                    console.log(value)
+                    document.querySelector('#ccnumber').value = fourGap
+                }
+            }
+
+            
+        }
+    </script>
 </body>
+
 </html>
 
 

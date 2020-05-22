@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Day4 - Calculator</title>
 </head>
+
 <body>
-    
+    <div class="calc">
+        <div class="screen">
+
+        </div>
+        <div class="pflex">
+
+            <div class="flex0">
+                <div class="flex__keys">
+                    <div class="flex__keys__key">7</div>
+                    <div class="flex__keys__key">8</div>
+                    <div class="flex__keys__key">9</div>
+                </div>
+                <div class="flex__keys">
+                    <div class="flex__keys__key">4</div>
+                    <div class="flex__keys__key">5</div>
+                    <div class="flex__keys__key">6</div>
+                </div>
+                <div class="flex__keys">
+                    <div class="flex__keys__key">1</div>
+                    <div class="flex__keys__key">2</div>
+                    <div class="flex__keys__key">3</div>
+                </div>
+                <div class="flex__keys">
+                    <div class="flex__keys__key">.</div>
+                    <div class="flex__keys__key">0</div>
+                    <div class="flex__keys__key">=</div>
+                </div>
+            </div>
+            <div class="flex1">
+                <div class="flex__symbol">Del</div>
+                <div class="flex__symbol">&divide;</div>
+                <div class="flex__symbol">&times;</div>
+                <div class="flex__symbol">&minus;</div>
+                <div class="flex__symbol">&plus;</div>
+            </div>
+        </div>
+
+        <div class="sci">
+            <div class="sci__keys">
+                <div class="sci__keys__key">Inv</div>
+                <div class="sci__keys__key">DEG</div>
+                <div class="sci__keys__key">%</div>
+            </div>
+            <div class="sci__keys">
+                <div class="sci__keys__key">sin</div>
+                <div class="sci__keys__key">cos</div>
+                <div class="sci__keys__key">tan</div>
+            </div>
+            <div class="sci__keys">
+                <div class="sci__keys__key">In</div>
+                <div class="sci__keys__key">log</div>
+                <div class="sci__keys__key">!</div>
+            </div>
+            <div class="sci__keys">
+                <div class="sci__keys__key">&alpha;</div>
+                <div class="sci__keys__key">e</div>
+                <div class="sci__keys__key">&UpArrow;</div>
+            </div>
+            <div class="sci__keys">
+                <div class="sci__keys__key">(</div>
+                <div class="sci__keys__key">)</div>
+                <div class="sci__keys__key">&Sqrt;</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.sci').addEventListener('click', () => {
+            document.querySelector('.sci').toggleClass('active')  
+        })
+    </script>
 </body>
+
 </html>
