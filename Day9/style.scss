@@ -1,0 +1,130 @@
+body {
+	background-color: rgba(248, 111, 93, 0.938);
+}
+
+.container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh;
+	transition: all 0.2s linear;
+}
+
+.list {
+	background-color: #166aa1;
+	color: #ffffff;
+	margin: 5%;
+	padding: 10px 5px;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	border-radius: 7px;
+	cursor: pointer;
+	user-select: none;
+
+	&:active {
+		cursor: wait;
+	}
+
+	h4 {
+		margin: 0;
+	}
+}
+
+.player {
+	margin: 40px auto;
+	background-color: #118de0;
+	width: 300px;
+	height: 350px;
+	border-radius: 20px;
+	padding-top: 40px;
+	box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.3);
+}
+
+.disc {
+	width: 200px;
+	height: 200px;
+	background: linear-gradient(45deg, #cacaca, #ffffff);
+	background-image: url("../assets/bg.JPG");
+	background-position: center;
+	background-size: contain;
+	border-radius: 100%;
+	margin: auto;
+	transition: transform 1s ease;
+	box-shadow: 0px 10px 200px rgba(200, 200, 200, 1);
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(72000deg);
+	}
+}
+
+audio {
+	position: fixed;
+	display: none;
+}
+
+.controls {
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: aliceblue;
+	padding: 20px 20px 10px 20px;
+}
+
+i {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+input[type="range"] {
+	height: 10px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: inset 0px .1px 2px  #000000;
+    border-radius: 5px;
+    -webkit-appearance: none;
+	transition: all 0.1s linear;
+    width: 85%;
+    appearance: none;
+    overflow: hidden;
+
+    &::-webkit-slider-thumb{
+        border: 10px solid #111111;
+        background-color: #118de0;
+        -webkit-appearance: none;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        box-shadow: -407px 0 0 407px #118de0;
+    }
+}
+
+.volume {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: aliceblue;
+	padding: 20px 20px 10px;
+}
+
+@media screen and (max-width: 760px) {
+	.container {
+		flex-direction: column-reverse;
+	}
+
+	.playlist {
+		width: 80%;
+		margin: 5% auto;
+	}
+}

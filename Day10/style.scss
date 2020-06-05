@@ -1,0 +1,67 @@
+body{
+    background: rgb(4, 155, 255); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+.container{
+    background: linear-gradient(60deg, #f8f8f8, #d8d8d8);
+    width: 80%;
+    margin: auto;
+    padding: 5% 7%;
+    border-radius: 23px;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, .4);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    animation: load 5s infinite;
+    transition: background .5s linear;
+
+    h1{
+        text-align: center;
+        font-size: 2.5em;
+        text-shadow: 0px 3px 1px #666666, 0px 5px 1px #666666, -2px 3px 1px #666666, -4px 5px 1px #666666, 0px 5px 1px #666666;
+        color: #000000;
+    }
+
+    p{
+        font-size: large;
+        font-weight: 500;
+        margin-bottom: 5%;
+        text-align: left;
+        line-height: 150%;
+
+        a{
+            text-decoration: none;
+            color: rgb(4, 155, 255);
+            font-size: large;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+
+    .share{
+        display: flex;
+        justify-content: space-around;
+        font-size: xx-large;
+
+        i{
+            background-color: rgb(4, 155, 255);
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0px 3px 7px rgba(0, 0, 0, .4);
+        }
+    }
+}
+
+@keyframes load{
+    0%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 300%;
+    }
+}
